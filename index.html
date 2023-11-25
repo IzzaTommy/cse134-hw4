@@ -9,6 +9,7 @@
 
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
 </head>
 <body>
     <main>
@@ -128,6 +129,35 @@
                 </picture>
 
                 <a href="/assets/documents/sourabh_bajaj_resume.pdf" target="_blank">Download</a>
+            </div>
+        </section>
+
+        <section id="hw4">
+            <h2>Form</h2>
+            <div>
+                <form action="https://httpbin.org/post" method="POST">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" placeholder="Johnny Appleseed" required minlength="2" maxlength="40" pattern="[a-zA-Z0-9]+">
+                        <output for="name"></output><output></output>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="johnnyapples@domain.com" required minlength="3" maxlength="40">
+                        <!-- <p>e</p> -->
+                    </div>
+
+                    <div>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" placeholder="Comments..." rows="5" required minlength="2" maxlength="250"></textarea>
+                        <!-- <p>e</p> -->
+                    </div>
+
+                    <input type="hidden" name="possible_bot" value="true">
+            
+                    <button type="submit">Send!</button>
+                </form>
             </div>
         </section>
 
