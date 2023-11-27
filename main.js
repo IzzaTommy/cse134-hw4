@@ -90,7 +90,7 @@ function nameHandler()
         
         if (nameInput.value.length < 0.75 * nameInput.getAttribute('maxlength'))
         {
-            nameWarning.style.color = 'color(display-p3 0.26043 0.38786 0.49537)';
+            nameWarning.style.color = 'cornflowerblue';
         }
         else
         {
@@ -173,7 +173,7 @@ function emailHandler()
         
         if (emailInput.value.length < 0.75 * emailInput.getAttribute('maxlength'))
         {
-            emailWarning.style.color = 'color(display-p3 0.26043 0.38786 0.49537)';
+            emailWarning.style.color = 'cornflowerblue';
         }
         else
         {
@@ -258,7 +258,7 @@ function commHandler()
         commWarning.textContent = `Characters Remaining: ${commInput.getAttribute('maxlength') - commInput.value.length}`;
         if (commInput.value.length < 0.75 * commInput.getAttribute('maxlength'))
         {
-            commWarning.style.color = 'color(display-p3 0.26043 0.38786 0.49537)';
+            commWarning.style.color = 'cornflowerblue';
         }
         else
         {
