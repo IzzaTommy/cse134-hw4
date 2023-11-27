@@ -15,12 +15,19 @@
         <header>
             <nav>
                 <a href="/">Thomas Joel</a>
+                
+                <input type="checkbox" id="theme-btn">
+                <label for="theme-btn">
+                    <svg>
+                        <use href="/assets/icons/sun-solid.svg#sun-solid"></use>
+                    </svg>
+                </label>
+
                 <input type="checkbox" id="menu-btn">
                 <label for="menu-btn">
-                    <picture>
-                        <source srcset="/assets/icons/hamburger_menu.svg" type="image/svg+xml">
-                        <img src="/assets/icons/hamburger_menu.png" alt="Icon for the navigation bar hamburger menu.">
-                    </picture>
+                    <svg>
+                        <use href="/assets/icons/hamburger_menu.svg#hamburger-menu"></use>
+                    </svg>
                 </label>
                 
                 <ul>
@@ -80,41 +87,37 @@
             <h2>Skills</h2>
 
             <div>
-                <figure>
-                    <picture>
-                        <source srcset="/assets/icons/c-plain.svg" type="image/svg+xml">
-                        <img src="/assets/icons/c-plain.png" alt="Logo of the programming language C.">
-                    </picture>
+                <div>
+                    <svg>
+                        <use href="/assets/icons/c-plain.svg#c-plain"></use>
+                    </svg>
                     <h3>C</h3>
-                    <figcaption>I have 2 years of experience using C, from implementing data structures to OS functions such as synchronization, scheduling, and threading.</figcaption>
-                </figure>
+                    <p>I have 2 years of experience using C, from implementing data structures to OS functions such as synchronization, scheduling, and threading.</p>
+                </div>
 
-                <figure>
-                    <picture>
-                        <source srcset="/assets/icons/java-plain.svg" type="image/svg+xml">
-                        <img src="/assets/icons/java-plain.png" alt="Logo of the programming language Java.">
-                    </picture>
+                <div>
+                    <svg>
+                        <use href="/assets/icons/java-plain.svg#java-plain"></use>
+                    </svg>
                     <h3>Java</h3>
-                    <figcaption>I have 3 years of experience using Java, applying knowledge of object-oriented design, polymorphism, data structures implementation.</figcaption>
-                </figure>
+                    <p>I have 3 years of experience using Java, applying knowledge of object-oriented design, polymorphism, data structures implementation.</p>
+                </div>
 
-                <figure>
-                    <picture>
-                        <source srcset="/assets/icons/python-plain.svg" type="image/svg+xml">
-                        <img src="/assets/icons/python-plain.png" alt="Logo of the programming language Python.">
-                    </picture>
+                <div>
+                    <svg>
+                        <use href="/assets/icons/python-plain.svg#python-plain"></use>
+                    </svg>
                     <h3>Python</h3>
-                    <figcaption>I have learned Python on my own time, developing web-scraping tools and working with pandas for data analytics.</figcaption>
-                </figure>
+                    <p>I have learned Python on my own time, developing web-scraping tools and working with pandas for data analytics.</p>
+                </div>
 
-                <figure>
-                    <picture>
-                        <source srcset="/assets/icons/git-plain.svg" type="image/svg+xml">
-                        <img src="/assets/icons/git-plain.png" alt="Logo of the source control tool Git.">
-                    </picture>
+                <div>
+                    <svg>
+                        <use href="/assets/icons/git-plain.svg#git-plain"></use>
+                    </svg>
                     <h3>Git</h3>
-                    <figcaption>I have multiple years of experience using Git, particularly through GitHub, for source control and documentation within teams.</figcaption>
-                </figure>
+                    <p>I have multiple years of experience using Git, particularly through GitHub, for source control and documentation within teams.</p>
+                </div>
             </div>
         </section>
 
@@ -138,9 +141,9 @@
                 <form action="https://httpbin.org/post" method="POST">
                     <div>
                         <label for="name">Name</label>
-                        <input id="name" type="text" name="name" placeholder="Johnny Appleseed" required minlength="2" maxlength="40" pattern="[a-zA-Z0-9]+" autocomplete="off">
+                        <input id="name" type="text" name="name" placeholder="Johnny Appleseed" required minlength="2" maxlength="40" pattern="[a-zA-Z0-9'\- ]+">
                         <output for="name">Character Limit: 2-40</output>
-                        <output for="name">Error: Name too short/long</output>
+                        <output for="name">Error: Invalid character/length</output>
                     </div>
 
                     <div>
@@ -152,9 +155,9 @@
 
                     <div>
                         <label for="comments">Comments</label>
-                        <textarea id="comments" name="comments" placeholder="Comments..." rows="5" required minlength="2" maxlength="250"></textarea>
+                        <input id="comments" name="comments" placeholder="Comments..." required minlength="2" maxlength="250" pattern="[a-zA-Z0-9!@#$%^&*\(\)_+\{\}\|:&quot;<>?=\[\]\-';.,\/\\ ]*">
                         <output for="comments">Character Limit: 2-250</output>
-                        <output for="comments">Error: Comment too short/long</output>
+                        <output for="comments">Error: Invalid character/length</output>
                     </div>
 
                     <input type="hidden" name="possible_bot" value="true">
